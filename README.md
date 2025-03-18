@@ -6,7 +6,7 @@ Scripts are used to generate the results and make the figures for the paper:
 (https://www.biorxiv.org/content/10.1101/2025.03.14.643259v1)
 
 **ASR:**
-- [*stoachasticmapping_script4states.R*] (ASR/stoachasticmapping_script4states.R) to test different models of ancestral state reconstruction 
+- [*stoachasticmapping_script4states.R*] (./ASR/stoachasticmapping_script4states.R) to test different models of ancestral state reconstruction 
 - *Figure1ASRplot.R*: to plot Figure 1 from the paper
 
 **BayesCode:**
