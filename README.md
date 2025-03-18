@@ -1,7 +1,7 @@
 # clownfishBarEvolution
 Updated 3.18.25 Lucy Fitzgerald
 
-Scripts are used to generate the results and make the figures for the paper [**Genetic basis of the evolution of vertical bars in clownfishes**] (https://www.biorxiv.org/content/10.1101/2025.03.14.643259v1)
+Scripts are used to generate the results and make the figures for the paper **Genetic basis of the evolution of vertical bars in clownfishes**(https://www.biorxiv.org/content/10.1101/2025.03.14.643259v1)
 
 **ASR Folder:**
 - *stoachasticmapping_script4states.R*: this script was used to test different models of ancestral state reconstruction with the "Data" folder containing the data input for the script and "Results" folder containing the simmap results
@@ -18,7 +18,7 @@ Scripts are used to generate the results and make the figures for the paper [**G
 - *Figure3and4Bayescodeplot.R*: Plots figures 3 and 4 from the paper for significant gain and loss color genes
 
 **CodeML Folder:**
-- *01_Create_CTLFile_CodeML.py*: Creates the codeml ctl files used to run codeml, raw alignment data is published in [Gaboriau et al., 2024] (https://www.biorxiv.org/content/10.1101/2024.07.08.602550v1)
+- *01_Create_CTLFile_CodeML.py*: Creates the codeml ctl files used to run codeml, raw alignment data is published in Gaboriau et al., 2024 (https://www.biorxiv.org/content/10.1101/2024.07.08.602550v1)
   -  ClownTree_OnlyNeededSpecies_Rooted.Gain.tree: input tree file with foreground branches for gain genes
   -  ClownTree_OnlyNeededSpecies_Rooted.Loss.tree: input tree file with foreground branches for loss genes
   -  "Results": results from running codeml three times for gain and loss analysis; All_gain_genes_results1.csv, All_gain_genes_results2.csv, All_gain_genes_results3.csv,
