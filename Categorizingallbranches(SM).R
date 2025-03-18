@@ -3,9 +3,7 @@ library(png)       # For reading PNG images
 library(phytools)  # For plotting the tree
 library(fishualize)
 
-#Choose a fish species for the color palette
-#option = "Epinephelus_lanceolatus"
-fish_palette <- fish(n = 4, option = "Epinephelus_lanceolatus")  # You can change "Clownfish" to other species
+fish_palette <- fish(n = 4, option = "Epinephelus_lanceolatus") 
 fishualize(n = 4, option = "Epinephelus_lanceolatus")
 
 stripes_bin <- read.csv("Data/adult_stripes_4states.csv", stringsAsFactors = F, row.names = 1)
@@ -37,7 +35,7 @@ legend(x = "bottomleft",title= "Number of Vertical Bars",
        pch=16, cex=1.2, bty="n", ncol=2)
 axisPhylo(backward = TRUE)
 
-# Select five node positions (adjust these numbers based on print output)
+
 gain_nodes <- c(28, 25, 52, 39, 6)
 
 # Extract x and y coordinates for selected nodes
@@ -49,7 +47,7 @@ gain_y <- gain_y + 0.58  # Shift up
 # Add "Gain" labels to the tree
 text(x = gain_x, y = gain_y, labels = "G", col = "red", cex = 0.8, font = 2)
 
-# Select five node positions (adjust these numbers based on print output)
+
 loss_nodes <- c(23, 14, 40, 41, 2)
 
 # Extract x and y coordinates for selected nodes
@@ -87,14 +85,6 @@ setwd("/Users/lfitzger/Test_BayesCode/")
 # Load the ape package
 library(ape)
 
-# Check if the files exist
-if (!file.exists("/Users/lfitzger/Desktop/PhD/Chapter2_ClownfishStripes/Data/calibrated_tree.tre")) {
-  stop("Tree file 1 does not exist.")
-}
-if (!file.exists("/Users/lfitzger/Test_BayesCode/Clown.DatedPhylogeny.annotated.tree")) {
-  stop("Tree file 2 does not exist.")
-}
-
 # Read tree files
 tree1 <- read.tree("/Users/lfitzger/Desktop/PhD/Chapter2_ClownfishStripes/Data/calibrated_tree.tre")
 tree2 <- read.tree("/Users/lfitzger/Test_BayesCode/Clown.DatedPhylogeny.annotated.tree")
@@ -109,9 +99,5 @@ tree1$node.label <- node_labels_tree2
 plot(tree1, show.node.label = FALSE, show.tip.label = TRUE)
 
 # Add node labels with a smaller font size
-nodelabels(tree1$node.label, cex = 0.6)  # Adjust cex for node labels
-
-# Add tip labels with a different font size
-#tiplabels(tree1$tip.label, cex = 0.8)  # Adjust cex for tip labels
-
+nodelabels(tree1$node.label, cex = 0.6)
 
